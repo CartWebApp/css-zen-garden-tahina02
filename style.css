@@ -1,1 +1,63 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
+/* basic elements */
+body {
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	background-color: #454545;
+	color: #ffffff;
+	text-align:justify;
+	border-radius: 30px;
+	margin: 80px;
+}
+h1 {
+	color: #ffffff;
+	font-size: 2.5em;
+	margin-bottom: 10px;;
+}
+p {
+	font-size: 1.1em;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: #ffffff;
+
+
+	a:link {
+		font-weight: bold;
+		text-decoration: none;
+		color: #B7A5DF;
+	}
+}
+/* specific divs */
+.page-wrapper {
+	background-color: #454545;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+intro; {
+	min-width: 10px;
+	wifdth: 100%;
+}
+header h1 {
+	margin-top: 0;
+}
+
+.sidebar {
+	margin-left: 300px; 
+	position: absolute; 
+	top: 0; 
+	right: 0;
+	}
+.sidebar .wrapper { 
+	font: 10px Arial, sans-serif; 
+	background: transparent url top left repeat-y; 
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 130px; 
+	}
