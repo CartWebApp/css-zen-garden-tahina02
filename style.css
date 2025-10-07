@@ -1,219 +1,117 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 /* basic elements */
+* {
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:root {
+    --background-dark: #282828; 
+    --background-mid: #454545;
+    --text-light: #ffffff;
+    --accent-color: #B7A5DF; 
+    --shadow-color: rgba(0, 0, 0, 0.7);
+}
+
 body {
-	font-family: Arial, sans-serif;
-	margin: 20px;
-	background-color: #454545;
-	color: #ffffff;
-	text-align:justify;
-	border-radius: 30px;
-	margin: 80px;
+   
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
 }
-h1 {
-	color: #ffffff;
-	font-size: 2.5em;
-	margin-bottom: 10px;;
-}
-p {
-	font-size: 1.1em;
-	line-height: 1.6;
-	margin-bottom: 20px;
-}
-a {
-	color: #ffffff;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: #ffffff;
 
+/* --- Layout Structure (Main Container) --- */
 
-	a:link {
-		font-weight: bold;
-		text-decoration: none;
-		color: #B7A5DF;
-	}
-}
-/* specific divs */
 .page-wrapper {
-	background-color: #454545;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-intro; {
-	min-width: 10px;
-	wifdth: 100%;
-}
-header h1 {
-	margin-top: 0;
+    
+    background-color: var(--background-mid);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: fr ; 
+    gap: 0px;
 }
 
-.sidebar {
-	margin-left: 300px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px Arial, sans-serif; 
-	background: transparent url top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-/* Empty file for template. Remember to edit only this file and not the HTML file */
-/* basic elements */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #454545;
-    color: #ffffff;
-    text-align: justify;
-    border-radius: 30px;
-    margin: 80px;
-}
+/* --- Typography --- */
+
 h1 {
-    color: #ffffff;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    color: var(--text-light);
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    ;
+    
 }
+
+h2 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
 p {
     font-size: 1.1em;
-    line-height: 1.6;
+    line-height: 1.7; 
     margin-bottom: 20px;
+    text-align: justify;
 }
+
+
 a {
-    color: #ffffff;
+    color: var(--accent-color);
     text-decoration: none;
+    font-weight: 500;
 }
-/* Existing link styles with fixes */
-a:hover {
-    text-decoration: underline; /* Fixed the incomplete declaration */
-    color: #B7A5DF;
-}
+
 a:link {
     font-weight: bold;
+    color: var(--accent-color);
+}
+
+div.explanation+div{
+    padding: 2em;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: rgb(255, 215, 250);    
+    backdrop-filter: blur(5px);
+    align-content: top;
+}
+
+.main.supporting{
+
+    padding: 1.5em;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: rgb(255, 215, 250);
+}
+
+
+div.participation~div.benefits{
+    padding: 2em;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: rgb(255, 215, 250);
+    backdrop-filter: blur(5px);
+}
+a:hover {
     text-decoration: none;
-    color: #B7A5DF;
-}
-/* specific divs */
-.page-wrapper {
-    background-color: #454545;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* Set up for a main content/sidebar layout */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px; /* Space between main content and sidebar */
-}
-/* Fixed the invalid selector 'intro;' to use a class or ID selector like .intro or #intro */
-.intro { 
-    min-width: 10px;
-    width: 100%;
-    margin-bottom: 20px;
-}
-header h1 {
-    margin-top: 0;
-}
-/* Existing Sidebar - Note: The position: absolute/right: 0 will pull it out of the flex flow. */
-/* Keeping your original styles, but the flex layout above might need adjustment depending on your HTML structure */
-.sidebar {
-   
-    position: relative; /
-    width: 250px; 
-    padding: 10px; 
-    background-color: #555555;
-    border-radius: 8px;
-    order: 2; 
-.sidebar .wrapper { 
-    font-size: 0.9em; 
-    background: transparent; /
-    margin-top: 20px; 
-}
-
-    background-color: #2c2c2c;
-    padding: 0;
-    width: 100%; 
-    border-radius: 5px;
-    margin-bottom: 30px;
-    order: 1; 
-}
-
-
-nav li:nth-child(2n) a { 
-    background-color: rgba(255, 255, 255, 0.05); 
-}
-
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: flex-start; 
-}
-
-
-nav li {
-    padding: 15px 20px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover, nav a:focus {
-    background-color: #666666;
-    color: white;
-    text-decoration: none;
-}
-
-.main-content {
-    flex-grow: 1; 
-    min-width: 60%;
-    order: 3; 
-}
-
-.main-content h2 + p:nth-of-type(2) {
-    font-style: italic;
-    border-left: 3px solid #B7A5DF;
-    padding-left: 15px;
-}
-
-div > img.feature-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* 3. Footer */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #2c2c2c;
-    color: #aaaaaa;
-    font-size: 0.85em;
-    border-radius: 0 0 10px 10px; /* Rounded bottom corners */
-    margin-top: 30px;
-    order: 4; /* Always at the bottom */
-}
-
-/* Use ::before pseudo-element on the footer to add a divider */
-footer::before {
-    content: "—";
-    display: block;
-    color: #666666;
-    margin-bottom: 10px;
-}
-
-/* Highlight text inside an element with the attribute [data-copyright] */
-footer [data-copyright] {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-/* Target the last child element in the footer */
-footer p:last-child {
-    margin-bottom: 0;
-}
+    color: var(--text-light); 
+    background-color: rgba(183, 165, 223, 0.1); 
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-shadow: 0 0 8px var(--accent-color); 
